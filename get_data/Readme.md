@@ -10,15 +10,15 @@
 
 - 클라이언트에는 NFS클라이언트 설치, 서버에는 NFS서버 설치 해야한다.
 
-#### 1. NFS설치
-##### [NFS 클라이언트]
+### 1. NFS설치
+#### [NFS 클라이언트]
 - NFS 관련 패키지 설치
 sudo apt install nfs-common (Ubuntu)
 
 - 서비스 실행
 
 
-##### [NFS 서버]
+#### [NFS 서버]
 - NFS 관련 패키지 설치
 sudo apt install nfs-kernel-server (Ubuntu)
 
