@@ -11,16 +11,37 @@
 - 클라이언트에는 NFS클라이언트 설치, 서버에는 NFS서버 설치 해야한다.
 
 ### 1. NFS설치
-#### [NFS 클라이언트]
+#### <NFS 서버>
+- NFS 관련 패키지 설치
+sudo apt install nfs-kernel-server (Ubuntu)
+
+- 마운트를 허가할 디렉토리와 마운트를 허가할 호스트 목록을 설정
+vi /etcexports [허가할 디렉토리] [허가할 호스트 ip주소](옵션1, 옵션2, ...)   
+// rw : 읽기쓰기가능, ro : 읽기만 가능, noaccess : 액세스거부
+// root_squach : 클의 root가 서버의 root권한획득 막음 
+// no_root_squach : 클의 root와 서버의 root권한을 동일하게 함
+// sync : 파일시스템이 변경되면 즉시 동기화
+
+- NFS 실행
+service nfs-kernel-server restart (Ubuntu)
+
+- NFS 맵핑 정보확인
+rpcinfo -p [맵핑정보를 확인하고자하는 특정ip]
+
+#### <NFS 클라이언트>
 - NFS 관련 패키지 설치
 sudo apt install nfs-common (Ubuntu)
 
-- 서비스 실행
+- NFS 서버에 마운트
+mount -t nfs 서버ip:/home/raw/heo_coin_data /home/raw/heo_coin_data 
+
+- 자동마운트
+vi /etc/fstab
+서버ip:/home/raw/heo_coin_data /home/raw/heo_coin_data nfs defaults 0.0(nfs계속연결시도)
+
+- NFS 마운트 확인
 
 
-#### [NFS 서버]
-- NFS 관련 패키지 설치
-sudo apt install nfs-kernel-server (Ubuntu)
 
 
 
