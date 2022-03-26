@@ -12,3 +12,10 @@
 
 ##### NFS설치
 [NFS 클라이언트]
+- NFS 관련 패키지 설치
+sudo apt install nfs-common(Ubuntu)
+
+- 서비스 실행
+
+
+[NFS 서버]
