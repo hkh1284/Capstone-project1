@@ -1,6 +1,6 @@
-# 캡스톤 프로젝트1
+# Capstone project 1
 
-가상화폐 모의투자 웹서비스 프로젝트
+가상화폐 모의투자 웹서비스 프로젝트 mock investment web service project
 
 ## 데이터파이프라인
 ### 자원
