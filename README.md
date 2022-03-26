@@ -1,2 +1,2 @@
-# Capstone-project1---mock_investment_web_service
+# 캡스톤 프로젝트1
 가상화폐 모의투자 웹서비스 프로젝트
