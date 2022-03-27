@@ -36,7 +36,8 @@ sudo apt install nfs-common (Ubuntu)
 showmount -e [nfs서버ip]
 
 - NFS 서버에 마운트
-mount -t nfs 서버ip:/home/raw/heo_coin_data /home/raw/heo_coin_data 
+mount -t nfs 서버ip:<공유할 디렉토리> <클라이언트에서 마운팅할 위치 즉, 마운팅포인트 - 절대경로>
+sudo mount -t nfs 192.168.23.91:/volume1/nfs-node5 /mnt/c/Users/gocjs/0.capstone/nas_nfs
 
 - 자동마운트
 vi /etc/fstab
@@ -44,6 +45,12 @@ vi /etc/fstab
 
 - NFS 마운트 확인
 
+
+#### <에러발생>
+##### 1. mount.nfs: No such device
+sudo mount -t nfs 192.168.23.91:/volume1/nfs-node5 /mnt/c/Users/gocjs/0.capstone/nas_nfs 
+위의 커맨드 실행시 mount.nfs: No such device라는 에러 발생
+##### 어떻게 해결할 것인가?
 
 
 
