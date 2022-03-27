@@ -32,6 +32,9 @@ rpcinfo -p [맵핑정보를 확인하고자하는 특정ip]
 - NFS 관련 패키지 설치
 sudo apt install nfs-common (Ubuntu)
 
+- NFS 서버에서 공유가능한 디렉토리 확인
+showmount -e [nfs서버ip]
+
 - NFS 서버에 마운트
 mount -t nfs 서버ip:/home/raw/heo_coin_data /home/raw/heo_coin_data 
 
