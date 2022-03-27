@@ -51,7 +51,10 @@ vi /etc/fstab
 sudo mount -t nfs 192.168.23.91:/volume1/nfs-node5 /mnt/c/Users/gocjs/0.capstone/nas_nfs 
 커맨드 실행시 mount.nfs: No such device라는 에러 발생
 ##### 어떻게 해결할 것인가?
-
+0. 사용자 시스템에서 서비스들의 목록을 확인하는 service --status-all 명령어로 현재 nfs-common과 rpcbind가 실행중인지 확인
+1. nfs rpcbind데몬이 실행되지 않았다. rpcbind데몬 실행 후 재시도 -> 같은에러발생
+2. nfs nfs-common데몬 실행되지 않았다. nfs-common데몬 실행 -> service nfs-common status 커맨드 -> 'rpc.idmapd not running'라는 결과가 나온다.
+  - rpc.idmapd는 무엇인가? : 
 
 
 
