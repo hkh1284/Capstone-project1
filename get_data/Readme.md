@@ -49,7 +49,7 @@ vi /etc/fstab
 #### <에러발생>
 ##### 1. mount.nfs: No such device
 sudo mount -t nfs 192.168.23.91:/volume1/nfs-node5 /mnt/c/Users/gocjs/0.capstone/nas_nfs 
-위의 커맨드 실행시 mount.nfs: No such device라는 에러 발생
+커맨드 실행시 mount.nfs: No such device라는 에러 발생
 ##### 어떻게 해결할 것인가?
 
 
